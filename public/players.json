@@ -1,0 +1,58 @@
+{
+    "eze": {
+        "name": "Eze",
+        "speed": 7,
+        "shoot": 3,
+        "pass": 9,
+        "dribble": 6,
+        "defense": 4
+    },
+    "marian": {
+        "name": "⁠Marian",
+        "speed": 5,
+        "shoot": 8,
+        "pass": 2,
+        "dribble": 10,
+        "defense": 7
+    },
+    "kota": {
+        "name": "Kota",
+        "speed": 6,
+        "shoot": 4,
+        "pass": 7,
+        "dribble": 8,
+        "defense": 3
+    },
+    "pepito": {
+        "name": "⁠pepito",
+        "speed": 9,
+        "shoot": 2,
+        "pass": 6,
+        "dribble": 5,
+        "defense": 8
+    },
+    "dim": {
+        "name": "⁠dim",
+        "speed": 4,
+        "shoot": 10,
+        "pass": 3,
+        "dribble": 7,
+        "defense": 6
+    },
+    "narbi": {
+        "name": "Narbi",
+        "speed": 8,
+        "shoot": 5,
+        "pass": 4,
+        "dribble": 9,
+        "defense": 2
+    },
+    "toto": {
+        "name": "Toto",
+        "speed": 1,
+        "shoot": 7,
+        "pass": 10,
+        "dribble": 2,
+        "defense": 5
+    }
+}

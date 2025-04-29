@@ -1,8 +1,8 @@
-import { TextareaAutosize, Button } from "@mui/material";
+import { TextareaAutosize, Button, Box } from "@mui/material";
 
 export default function PromptBox({ handlePrompt, playersList, setPlayersList }) {
     return (
-        <>
+        <Box>
             <TextareaAutosize
                 maxRows={4}
                 aria-label="Lista de jugadores"
@@ -21,6 +21,6 @@ export default function PromptBox({ handlePrompt, playersList, setPlayersList })
                 }}
             />
             <Button variant="contained" sx={{ width: '100%' }} onClick={handlePrompt}>Generar equipos</Button>
-        </>
+        </Box>
     );
 }

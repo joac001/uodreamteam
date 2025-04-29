@@ -90,3 +90,10 @@ export function teamStats(team) {
 
     return averageStats;
 }
+
+export function parseToShare(teams) {
+    const blancoPlayers = teams.Blanco.map(player => player.name).join("\n");
+    const colorPlayers = teams.Color.map(player => player.name).join("\n");
+
+    return `Blanco:\n${blancoPlayers}\n\nColor:\n${colorPlayers}`;
+}

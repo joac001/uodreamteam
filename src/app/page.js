@@ -4,7 +4,7 @@ import PromptBox from "@/components/PromptBox";
 import TeamCard from "@/components/TeamCard";
 import { useState } from "react";
 
-import { parser, balancer } from "@/utils";
+import { parser, balancer, parseToShare } from "@/utils";
 
 export default function Home() {
   const [prompted, setPrompted] = useState(false);
@@ -22,26 +22,43 @@ export default function Home() {
     setPlayersList('');
   }
 
+  const handleShare = () => {
+    const shareString = parseToShare(teams);
+    navigator.clipboard.writeText(shareString)
+      .then(() => {
+        alert('Texto copiado al portapapeles');
+      })
+      .catch(err => {
+        console.error('Error al copiar el texto: ', err);
+      });
+  }
+
   return (
-    <>
-      <Box>
-        {prompted ?
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-evenly",
-              width: "90vw",
-            }}
-          >
-            <TeamCard teamColor='black' team={teams['Color']} />
-            <Button variant="contained" onClick={handleCreateNew} sx={{ height: '100%' }} >Crear nuevos equipos</Button>
-            <TeamCard teamColor='white' team={teams['Blanco']} />
-          </Box>
-          :
-          <PromptBox handlePrompt={handlePrompt} playersList={playersList} setPlayersList={setPlayersList} />
-        }
+
+    prompted ?
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          justifyContent: "space-evenly",
+          width: "90vw",
+          marginBottom: 10,
+        }}
+      >
+        <TeamCard teamColor='black' team={teams['Color']} teamName='color' />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Button variant="contained" onClick={handleCreateNew} sx={{ height: 'fit-content', bgcolor: '#962626' }} >Crear nuevos equipos</Button>
+          <Button variant="contained" onClick={handleShare} sx={{ height: 'fit-content', marginTop: 2 }}>Copiar al porta papeles</Button>
+        </Box>
+        <TeamCard teamColor='white' team={teams['Blanco']} teamName='blanco' />
       </Box >
-    </>
+      :
+      <PromptBox handlePrompt={handlePrompt} playersList={playersList} setPlayersList={setPlayersList} />
+
   );
 }

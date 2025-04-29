@@ -2,7 +2,7 @@
 
 import { ThemeProvider, CssBaseline, Box } from "@mui/material";
 import theme from "@/Theme";
-import Footer from "./Footer";
+import { Padauk } from "next/font/google";
 
 export default function ThemeRegistry({ children }) {
     return (
@@ -12,13 +12,12 @@ export default function ThemeRegistry({ children }) {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                background: 'linear-gradient(60deg, white 50%, black 50%)',
-                height: '100vh',
-                paddingTop: '15vh',
+                backgroundImage: 'linear-gradient(60deg, white 50%, black 50%)',
+                minHeight: '100vh',
+                padding: 10,
             }}>
                 <CssBaseline />
                 {children}
-                <Footer />
             </Box>
         </ThemeProvider>
     );

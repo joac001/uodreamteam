@@ -25,10 +25,7 @@ export default function Home() {
   const handleShare = () => {
     const shareString = parseToShare(teams);
     navigator.clipboard.writeText(shareString)
-      .then(() => {
-        alert('Texto copiado al portapapeles');
-      })
-      .catch(err => {
+      .then(() => { }).catch(err => {
         console.error('Error al copiar el texto: ', err);
       });
   }

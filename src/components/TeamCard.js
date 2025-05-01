@@ -55,19 +55,19 @@ export default function TeamCard({ teamColor, team, teamName }) {
 
                     <Typography sx={{ alignSelf: 'start', display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', justifyContent: 'space-between' }} variant="body">
                         Pases
-                        <Box sx={{ bgcolor: teamColor == 'white' ? 'black' : 'white', margin: 2, borderRadius: 2, paddingX: 1, color: teamColor }}>{averageStats['shoot'] ? averageStats['shoot'].toFixed(2) * 10 : 0}</Box>
+                        <Box sx={{ bgcolor: teamColor == 'white' ? 'black' : 'white', margin: 2, borderRadius: 2, paddingX: 1, color: teamColor }}>{averageStats['pass'] ? averageStats['pass'].toFixed(2) * 10 : 0}</Box>
                     </Typography>
                     <Slider team={teamColor} percentaje={averageStats['pass'] * 10} />
 
                     <Typography sx={{ alignSelf: 'start', display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', justifyContent: 'space-between' }} variant="body">
                         Dribble
-                        <Box sx={{ bgcolor: teamColor == 'white' ? 'black' : 'white', margin: 2, borderRadius: 2, paddingX: 1, color: teamColor }}>{averageStats['shoot'] ? averageStats['shoot'].toFixed(2) * 10 : 0}</Box>
+                        <Box sx={{ bgcolor: teamColor == 'white' ? 'black' : 'white', margin: 2, borderRadius: 2, paddingX: 1, color: teamColor }}>{averageStats['dribble'] ? averageStats['dribble'].toFixed(2) * 10 : 0}</Box>
                     </Typography>
                     <Slider team={teamColor} percentaje={averageStats['dribble'] * 10} />
 
                     <Typography sx={{ alignSelf: 'start', display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', justifyContent: 'space-between' }} variant="body">
                         Defensa
-                        <Box sx={{ bgcolor: teamColor == 'white' ? 'black' : 'white', margin: 2, borderRadius: 2, paddingX: 1, color: teamColor }}>{averageStats['shoot'] ? averageStats['shoot'].toFixed(2) * 10 : 0}</Box>
+                        <Box sx={{ bgcolor: teamColor == 'white' ? 'black' : 'white', margin: 2, borderRadius: 2, paddingX: 1, color: teamColor }}>{averageStats['defense'] ? averageStats['defense'].toFixed(2) * 10 : 0}</Box>
                     </Typography>
                     <Slider team={teamColor} percentaje={averageStats['defense'] * 10} />
                 </Box>

@@ -1,4 +1,28 @@
 {
+    "queto": {
+        "name": "Queto",
+        "speed": 7,
+        "shoot": 9,
+        "pass": 9,
+        "dribble": 9,
+        "defense": 5
+    },
+    "toto": {
+        "name": "Toto",
+        "speed": 7,
+        "shoot": 9,
+        "pass": 7,
+        "dribble": 7,
+        "defense": 6
+    },
+    "mati": {
+        "name": "Mati",
+        "speed": 7,
+        "shoot": 5,
+        "pass": 6,
+        "dribble": 4,
+        "defense": 7
+    },
     "eze": {
         "name": "Eze",
         "speed": 10,
@@ -6,6 +30,14 @@
         "pass": 7,
         "dribble": 6,
         "defense": 9
+    },
+    "galer": {
+        "name": "Galer",
+        "speed": 8,
+        "shoot": 8,
+        "pass": 7,
+        "dribble": 7,
+        "defense": 7
     },
     "marian": {
         "name": "Marian",
@@ -15,12 +47,28 @@
         "dribble": 4,
         "defense": 8
     },
+    "jrr": {
+        "name": "JRR",
+        "speed": 4,
+        "shoot": 3,
+        "pass": 4,
+        "dribble": 3,
+        "defense": 5
+    },
     "kota": {
         "name": "Kota",
         "speed": 4,
         "shoot": 4,
         "pass": 6,
         "dribble": 4,
+        "defense": 7
+    },
+    "quique": {
+        "name": "Quique",
+        "speed": 7,
+        "shoot": 4,
+        "pass": 6,
+        "dribble": 5,
         "defense": 7
     },
     "pepito": {
@@ -31,6 +79,14 @@
         "dribble": 3,
         "defense": 6
     },
+    "pancho": {
+        "name": "Pancho",
+        "speed": 6,
+        "shoot": 5,
+        "pass": 6,
+        "dribble": 5,
+        "defense": 5
+    },
     "dim": {
         "name": "Dim",
         "speed": 7,
@@ -38,6 +94,14 @@
         "pass": 9,
         "dribble": 9,
         "defense": 6
+    },
+    "rex": {
+        "name": "Rex",
+        "speed": 6,
+        "shoot": 6,
+        "pass": 6,
+        "dribble": 5,
+        "defense": 7
     },
     "narbi": {
         "name": "Narbi",
@@ -47,12 +111,36 @@
         "dribble": 7,
         "defense": 8
     },
-    "toto": {
-        "name": "Toto",
-        "speed": 7,
-        "shoot": 9,
+    "tincho": {
+        "name": "Tincho",
+        "speed": 6,
+        "shoot": 6,
         "pass": 7,
         "dribble": 7,
+        "defense": 5
+    },
+    "gareth": {
+        "name": "Gareth",
+        "speed": 5,
+        "shoot": 9,
+        "pass": 7,
+        "dribble": 8,
+        "defense": 3
+    },
+    "castri": {
+        "name": "Castri",
+        "speed": 8,
+        "shoot": 9,
+        "pass": 8,
+        "dribble": 7,
+        "defense": 7
+    },
+    "salvi": {
+        "name": "Salvi",
+        "speed": 8,
+        "shoot": 6,
+        "pass": 7,
+        "dribble": 6,
         "defense": 6
     }
 }

@@ -71,6 +71,14 @@
         "dribble": 5,
         "defense": 7
     },
+    "rata": {
+        "name": "Rata",
+        "speed": 7,
+        "shoot": 4,
+        "pass": 6,
+        "dribble": 5,
+        "defense": 7
+    },
     "pepito": {
         "name": "Pepito",
         "speed": 4,

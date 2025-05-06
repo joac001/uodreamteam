@@ -4,7 +4,7 @@ import PromptBox from "@/components/PromptBox";
 import TeamCard from "@/components/TeamCard";
 import { useState } from "react";
 
-import { parser, balancer, parseToShare } from "@/utils";
+import { balancer, parseToShare } from "@/utils";
 
 export default function Home() {
   const [prompted, setPrompted] = useState(false);
@@ -12,8 +12,7 @@ export default function Home() {
   const [teams, setTeams] = useState(null);
 
   const handlePrompt = () => {
-    const parsedData = parser(playersList);
-    setTeams(balancer(parsedData));
+    setTeams(balancer(playersList));
     setPrompted(true);
   }
 

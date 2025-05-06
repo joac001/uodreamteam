@@ -8,7 +8,7 @@ import { balancer, parseToShare } from "@/utils";
 
 export default function Home() {
   const [prompted, setPrompted] = useState(false);
-  const [playersList, setPlayersList] = useState('');
+  const [playersList, setPlayersList] = useState();
   const [teams, setTeams] = useState(null);
 
   const handlePrompt = () => {

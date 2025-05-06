@@ -1,44 +1,11 @@
-import playersData from "@/../public/players.json";
-
-export function parser(playersList) {
-
-    // Convertir la lista de nombres en un array
-    const names = playersList
-        .split("\n") // Dividir por líneas
-        .map((line) => line.replace(/^\d+\.\s*/, "").trim()) // Remover números y espacios
-        .filter((name) => name.length > 0); // Filtrar líneas vacías
-
-
-    // Crear el JSON con los jugadores
-    const result = names.map((name) => {
-        if (playersData[name.toLowerCase()]) {
-            // Si el jugador está en players.json, usar sus estadísticas
-            return {
-                name: playersData[name.toLowerCase()].name,
-                ...playersData[name.toLowerCase()],
-            };
-        } else {
-            // Si no está, asignar valores por defecto
-            return {
-                name: name,
-                speed: 5.0,
-                shoot: 5.0,
-                pass: 5.0,
-                dribble: 5.0,
-                defense: 5.0,
-            };
-        }
-    });
-
-    return result;
-}
-
 export function balancer(players) {
-    // Calcular el puntaje total de cada jugador sumando sus habilidades
-    const playersWithScores = Array.isArray(players) ? players.map(player => ({
+    // Convertir el objeto recibido en un array de jugadores
+    const playersArray = Object.values(players);
+
+    const playersWithScores = playersArray.map(player => ({
         ...player,
         totalScore: player.speed + player.shoot + player.pass + player.dribble + player.defense
-    })) : [];
+    }));
 
     // Ordenar jugadores por puntaje total de mayor a menor
     playersWithScores.sort((a, b) => b.totalScore - a.totalScore);

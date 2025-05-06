@@ -1,6 +1,6 @@
 import { Button, Box, Card, CardContent, Typography, Grid, Checkbox } from "@mui/material";
 import playersObject from "@/../public/players.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function PromptBox({ handlePrompt, playersList, setPlayersList }) {
     // Convertir el objeto de jugadores a un array para facilitar el manejo
@@ -14,8 +14,13 @@ export default function PromptBox({ handlePrompt, playersList, setPlayersList })
 
     const handleGenerateTeams = () => {
         setPlayersList(selectedPlayers);
-        handlePrompt();
     }
+
+    useEffect(() => {
+        if (playersList) {
+            handlePrompt();
+        }
+    }, [playersList, handlePrompt]);
 
     // Manejar la selección/deselección de un jugador
     const handleToggleSelect = (playerId) => {
@@ -48,7 +53,7 @@ export default function PromptBox({ handlePrompt, playersList, setPlayersList })
             {/* Lista de todos los jugadores */}
             <Grid container spacing={2}>
                 {allPlayers.map((player) => (
-                    <Grid item xs={12} sm={6} md={4} lg={3} key={player.id}>
+                    <Grid key={player.id}>
                         <Card
                             sx={{
                                 cursor: "pointer",
@@ -60,6 +65,7 @@ export default function PromptBox({ handlePrompt, playersList, setPlayersList })
                                     : "#fff",
                                 transition: "all 0.3s",
                                 color: selectedPlayerIds.includes(player.id) ? "#fff" : "#000",
+                                userSelect: 'none',
                             }}
                             onClick={() => handleToggleSelect(player.id)}
                         >
